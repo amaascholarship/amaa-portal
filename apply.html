@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMAA Scholarship | Official Application Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root { 
+            --royal-blue: #002a52;
+            --deep-navy: #001226;
+            --gold-gradient: linear-gradient(45deg, #d4af37, #f2d06b, #aa891c);
+            --gold-glow: 0 0 15px rgba(212, 175, 55, 0.5);
+            --white: #ffffff; 
+            --live-green: #00ff88;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body { 
+            font-family: 'Poppins', sans-serif; 
+            background: #001226; 
+            color: var(--white); 
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* TOP BAR */
+        .top-bar {
+            background: rgba(0, 18, 38, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #d4af37;
+            position: sticky;
+            top: 0;
+            z-index: 1100;
+        }
+
+        /* SUPER ATTRACTIVE BLINKING STATUS */
+        .status-tag { 
+            color: var(--live-green); 
+            font-weight: 900;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-shadow: 0 0 10px var(--live-green), 0 0 20px rgba(0, 255, 136, 0.5);
+            animation: ultra-blink 1s infinite alternate;
+        }
+
+        @keyframes ultra-blink { 
+            from { opacity: 1; filter: brightness(1.5); } 
+            to { opacity: 0.3; filter: brightness(0.8); } 
+        }
+
+        .back-home {
+            background: var(--gold-gradient);
+            color: var(--deep-navy);
+            text-decoration: none;
+            padding: 8px 22px;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 900;
+            box-shadow: var(--gold-glow);
+            transition: 0.4s;
+            text-transform: uppercase;
+        }
+
+        /* HEADER */
+        .page-header {
+            background: linear-gradient(to bottom, rgba(0, 42, 82, 0.7), #001226), 
+                        url('https://i.ibb.co/r2t97fQH/AZ2-Yo-H2u4cn00-Pem-XLNU9-Q-AZ2-Yo-H2u4-ZDr6xl7p9-HODg-20260417-003101-0000.png');
+            background-size: cover;
+            background-position: center;
+            padding: 80px 10%;
+            text-align: center;
+        }
+
+        .page-header h1 { 
+            font-family: 'Montserrat', sans-serif; 
+            font-size: 3rem; 
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+            font-weight: 900;
+        }
+
+        /* POLICY GLASS CARDS */
+        .requirement-section { margin: -50px 5% 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
+        .policy-card { 
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(15px);
+            padding: 30px; 
+            border-radius: 20px; 
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+        }
+        .policy-card h2 { color: #f2d06b; font-size: 1.2rem; text-transform: uppercase; margin-bottom: 20px; border-bottom: 1px solid rgba(242, 208, 107, 0.3); padding-bottom: 10px; }
+        .policy-list li { margin-bottom: 15px; font-size: 0.9rem; list-style: none; padding-left: 25px; position: relative; }
+        .policy-list li::before { content: "✦"; position: absolute; left: 0; color: #d4af37; font-weight: bold; }
+
+        /* EXAM GRID */
+        .exam-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; padding: 0 5% 60px; }
+        .exam-card { 
+            background: linear-gradient(145deg, #002a52, #001a35);
+            padding: 40px 20px; 
+            text-align: center; 
+            border-radius: 24px; 
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            transition: 0.4s;
+        }
+        .exam-card:hover { border-color: #d4af37; transform: translateY(-10px); box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2); }
+        .exam-card h3 { font-family: 'Montserrat', sans-serif; font-size: 2.2rem; margin-bottom: 15px; }
+        .apply-btn { 
+            background: var(--gold-gradient); color: var(--deep-navy); border: none; padding: 16px; 
+            font-weight: 900; text-transform: uppercase; width: 100%; cursor: pointer; border-radius: 12px;
+        }
+
+        /* RESTORED SCHOLARSHIP JOURNEY WITH DESCRIPTIONS */
+        .roadmap { padding: 80px 10%; text-align: center; background: rgba(255,255,255,0.02); }
+        .roadmap h2 { font-family: 'Montserrat', sans-serif; font-size: 2.2rem; margin-bottom: 50px; background: var(--gold-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        .steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; }
+        .step-item .number { 
+            background: var(--gold-gradient); color: var(--deep-navy); width: 60px; height: 60px; 
+            border-radius: 50%; line-height: 60px; margin: 0 auto 25px; font-weight: 900; font-size: 1.2rem;
+            box-shadow: var(--gold-glow);
+        }
+        .step-item h4 { font-family: 'Montserrat'; font-weight: 800; text-transform: uppercase; margin-bottom: 15px; color: #f2d06b; }
+        .step-item p { font-size: 0.9rem; opacity: 0.8; line-height: 1.7; }
+
+        /* MODAL */
+        .modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); overflow-y: auto; }
+        .modal-content { background: #fff; margin: 2vh auto; padding: 35px; width: 95%; max-width: 500px; border-radius: 25px; color: var(--deep-navy); position: relative; }
+        label { font-weight: 800; display: block; margin-top: 15px; font-size: 0.75rem; text-transform: uppercase; color: #777; }
+        input, select, textarea { width: 100%; padding: 12px; margin-top: 5px; border: 2px solid #eee; border-radius: 10px; font-family: inherit; }
+        .target-box { background: var(--deep-navy); color: #d4af37; padding: 12px; border-radius: 10px; margin-top: 5px; font-weight: 800; text-align: center; }
+
+        footer { background: #000; padding: 50px; text-align: center; border-top: 2px solid #d4af37; font-size: 0.8rem; letter-spacing: 2px; }
+
+        @media (max-width: 600px) { .page-header h1 { font-size: 2rem; } }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">
+        <div class="status-tag">
+            <span style="background: var(--live-green); width: 12px; height: 12px; border-radius: 50%; box-shadow: 0 0 10px var(--live-green);"></span>
+            Portal Secure & Live
+        </div>
+        <a href="index.html" class="back-home">Back to Home</a>
+    </div>
+
+    <header class="page-header">
+        <h1>Application Portal</h1>
+        <p style="letter-spacing: 3px; font-weight: 300;">SECURE MERIT-BASED GRANT SELECTION</p>
+    </header>
+
+    <section class="requirement-section">
+        <div class="policy-card">
+            <h2>Student Requirements</h2>
+            <ul class="policy-list">
+                <li><b>Principal's Letter:</b> A signed recommendation is 100% mandatory.</li>
+                <li><b>Origin Proof:</b> Provide verifiable State of Origin documentation.</li>
+                <li><b>Motivation:</b> State clearly why you deserve this support.</li>
+            </ul>
+        </div>
+        <div class="policy-card">
+            <h2>Strict Policies</h2>
+            <ul class="policy-list" style="color: #ff8e8e;">
+                <li><b>No Fraud:</b> Forged documents lead to an immediate <b>Lifetime Ban</b>.</li>
+                <li><b>Bot Guard:</b> Automated entries trigger an <b>IP Lockout</b>.</li>
+                <li><b>Verification:</b> We will call your Principal to confirm all details.</li>
+            </ul>
+        </div>
+    </section>
+
+    <div class="exam-grid">
+        <div class="exam-card"><h3>WAEC</h3><button class="apply-btn" onclick="openForm('WAEC')">Apply</button></div>
+        <div class="exam-card"><h3>JAMB</h3><button class="apply-btn" onclick="openForm('JAMB')">Apply</button></div>
+        <div class="exam-card"><h3>NECO</h3><button class="apply-btn" onclick="openForm('NECO')">Apply</button></div>
+        <div class="exam-card"><h3>SSCE</h3><button class="apply-btn" onclick="openForm('SSCE')">Apply</button></div>
+    </div>
+
+    <section class="roadmap">
+        <h2>SCHOLARSHIP JOURNEY</h2>
+        <div class="steps-grid">
+            <div class="step-item">
+                <div class="number">1</div>
+                <h4>Registration</h4>
+                <p>Complete the secure digital application form with accurate academic data and personal details.</p>
+            </div>
+            <div class="step-item">
+                <div class="number">2</div>
+                <h4>Vetting</h4>
+                <p>Our board performs a rigorous audit, contacting school authorities and verifying all uploaded letters.</p>
+            </div>
+            <div class="step-item">
+                <div class="number">3</div>
+                <h4>Grant Award</h4>
+                <p>Successful candidates receive full funding for their selected examination registration fees.</p>
+            </div>
+        </div>
+    </section>
+
+    <div id="applyModal" class="modal">
+        <div class="modal-content">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                <h2 id="formTitle" style="font-family: 'Montserrat'; font-weight: 900;">Scholarship</h2>
+                <span style="cursor:pointer; font-size:30px; font-weight: 900; color: #ddd;" onclick="closeForm()">&times;</span>
+            </div>
+            
+            <form id="scholarshipForm"action="https://formspree.io/f/xjglwyae" method="POST" enctype="multipart/form-data"></form>>
+                <label>Full Legal Name</label>
+                <input type="text" placeholder="Surname First" required>
+
+                <label>State of Origin</label>
+                <select required>
+                    <option value="">-- Choose State --</option>
+                    <option>Lagos</option><option>Kano</option><option>Rivers</option><option>Enugu</option><option>Oyo</option>
+                </select>
+
+                <label>Target Exam</label>
+                <div class="target-box" id="examDisplay">--</div>
+
+                <label>Motivation Statement</label>oooooooooooooooooooooooo
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                
+                <textarea rows="3" placeholder="How will this scholarship help you?" required></textarea>
+
+                <label>Principal's Name & Phone</label>
+                <input type="text" placeholder="Principal's Name" required style="margin-bottom:8px;">
+                <input type="tel" placeholder="080XXXXXXXX" required>
+
+                <label>Upload Principal's Letter</label>
+                <input type="file" required style="border:none; padding-left:0;">
+
+                <div style="background: #fff0f0; border-left: 4px solid #ff4444; padding: 15px; margin-top: 20px; border-radius: 8px; font-size: 0.8rem;">
+                    <p><b style="color: #ff4444;">LEGAL NOTICE:</b> By submitting, you agree to an academic audit. Fraud results in legal reporting.</p>
+                </div>
+
+                <button type="submit" class="apply-btn" style="margin-top:20px;">Submit Application</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 AMAA SCHOLARSHIP FOUNDATION.</p>
+        <p style="color: #d4af37; font-weight: 900; margin-top: 10px;">AN EQUAL OPPORTUNITY ACADEMIC PROVIDER.</p>
+    </footer>
+
+    <script>
+        function openForm(type) {
+            document.getElementById('applyModal').style.display = "block";
+            document.getElementById('examDisplay').innerText = "Target: " + type;
+            document.getElementById('formTitle').innerText = type + " Application";
+            document.body.style.overflow = "hidden";
+        }
+        function closeForm() {
+            document.getElementById('applyModal').style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+    </script>
+</body>
+</html>

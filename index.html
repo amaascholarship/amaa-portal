@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMAA Scholarship Portal | OFFICIAL</title>
+    <style>
+        :root {
+            --primary-blue: #001a35; 
+            --accent-gold: #d4af37;   
+            --bg-light: #ffffff;
+            --white: #ffffff;
+            --live-green: #2ecc71;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Arial Black', sans-serif; 
+            line-height: 1.4;
+            color: var(--primary-blue);
+            background-color: var(--bg-light);
+        }
+
+        /* BOLD TOP BAR WITH LIVE STATUS */
+        .top-bar {
+            background: var(--primary-blue);
+            color: var(--white);
+            padding: 12px 5%;
+            font-size: 0.8rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 4px solid var(--accent-gold);
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .status-indicator {
+            color: var(--live-green);
+            animation: pulse 1.5s infinite;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.3; }
+            100% { opacity: 1; }
+        }
+
+        /* MASSIVE HEADER */
+        header {
+            background: var(--white);
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo-area h1 {
+            font-size: 3.5rem; 
+            color: var(--primary-blue);
+            font-weight: 900;
+            line-height: 0.8;
+            letter-spacing: -3px;
+        }
+
+        .logo-area span {
+            display: block;
+            font-size: 0.9rem;
+            color: var(--accent-gold);
+            letter-spacing: 6px;
+            text-transform: uppercase;
+            margin-top: 5px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--primary-blue);
+            margin-left: 20px;
+            font-weight: 900;
+            font-size: 1rem;
+            text-transform: uppercase;
+            padding: 10px 0;
+            border-bottom: 3px solid transparent;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            border-bottom: 3px solid var(--accent-gold);
+        }
+
+        /* AGGRESSIVE HERO SECTION */
+        .hero {
+            height: 85vh;
+            background: linear-gradient(rgba(0, 26, 53, 0.8), rgba(0, 26, 53, 0.8)), 
+                        url('https://i.ibb.co/r2t97fQH/AZ2-Yo-H2u4cn00-Pem-XLNU9-Q-AZ2-Yo-H2u4-ZDr6xl7p9-HODg-20260417-003101-0000.png');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            text-align: left;
+            color: var(--white);
+            padding: 0 10%;
+        }
+
+        .hero-text h2 {
+            font-size: 5rem; 
+            font-weight: 900;
+            text-transform: uppercase;
+            line-height: 0.9;
+            margin-bottom: 20px;
+            max-width: 800px;
+            letter-spacing: -2px;
+        }
+
+        .hero-text p {
+            font-size: 1.5rem;
+            font-family: 'Segoe UI', sans-serif;
+            font-weight: 400;
+            max-width: 700px;
+            margin-bottom: 40px;
+            border-left: 5px solid var(--accent-gold);
+            padding-left: 20px;
+        }
+
+        .hero-btn {
+            background: var(--accent-gold);
+            color: var(--primary-blue);
+            padding: 25px 60px;
+            text-decoration: none;
+            font-weight: 900;
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            display: inline-block;
+            box-shadow: 10px 10px 0px var(--primary-blue);
+            transition: 0.2s;
+        }
+
+        /* MOBILE ADJUSTMENTS */
+        @media (max-width: 768px) {
+            .top-bar { flex-direction: column; text-align: center; gap: 10px; padding: 15px; }
+            .logo-area h1 { font-size: 2.5rem; }
+            .hero-text h2 { font-size: 3rem; }
+            header { flex-direction: column; height: auto; padding: 20px; text-align: center; }
+            nav { margin-top: 20px; }
+            .hero { padding: 0 5%; }
+        }
+
+        /* THE GRID */
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            background: var(--primary-blue);
+            color: white;
+        }
+
+        .info-card {
+            padding: 60px 10%;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .info-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: var(--accent-gold);
+            text-transform: uppercase;
+        }
+
+        footer {
+            background: #000;
+            color: #fff;
+            text-align: center;
+            padding: 60px 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.8rem;
+            line-height: 2;
+            border-top: 4px solid var(--accent-gold);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">
+        <div class="status-indicator">● PORTAL ACTIVE</div>
+        <div>EXTERNAL EXAM GRANTS 2026/2027</div>
+    </div>
+
+    <header>
+        <div class="logo-area">
+            <h1>AMAA</h1>
+            <span>Scholarship Portal</span>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#about">The Foundation</a>
+            <a href="#criteria">Criteria</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h2>EMPOWERING<br>ACADEMIC<br>EXCELLENCE</h2>
+            <p>Merit-based financial grants for high-performing secondary students sitting for WAEC, JAMB, NECO, and SSCE.</p>
+            <a href="apply.html" class="hero-btn">Start Application</a>
+        </div>
+    </section>
+
+    <main class="container">
+        <div class="info-card" id="about">
+            <h3>MISSION</h3>
+            <p>Removing financial barriers for the next generation of African leaders and scholars.</p>
+        </div>
+        <div class="info-card" style="background: #00254d;" id="criteria">
+            <h3>PROTOCOL</h3>
+            <p>Strict merit-based selection. All applications undergo multi-stage verification with school principals.</p>
+        </div>
+        <div class="info-card">
+            <h3>DEADLINE</h3>
+            <p>Applications close August 30th, 2026. No late entries will be entertained by the board.</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 AMAA SCHOLARSHIP FOUNDATION.</p>
+        <p style="color: var(--accent-gold); font-weight: 900;">AN EQUAL OPPORTUNITY ACADEMIC PROVIDER.</p>
+    </footer>
+
+</body>
+</html>
