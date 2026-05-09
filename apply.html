@@ -39,7 +39,6 @@
             z-index: 1100;
         }
 
-        /* SUPER ATTRACTIVE BLINKING STATUS */
         .status-tag { 
             color: var(--live-green); 
             font-weight: 900;
@@ -122,7 +121,7 @@
             font-weight: 900; text-transform: uppercase; width: 100%; cursor: pointer; border-radius: 12px;
         }
 
-        /* RESTORED SCHOLARSHIP JOURNEY WITH DESCRIPTIONS */
+        /* ROADMAP */
         .roadmap { padding: 80px 10%; text-align: center; background: rgba(255,255,255,0.02); }
         .roadmap h2 { font-family: 'Montserrat', sans-serif; font-size: 2.2rem; margin-bottom: 50px; background: var(--gold-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; }
@@ -140,6 +139,17 @@
         label { font-weight: 800; display: block; margin-top: 15px; font-size: 0.75rem; text-transform: uppercase; color: #777; }
         input, select, textarea { width: 100%; padding: 12px; margin-top: 5px; border: 2px solid #eee; border-radius: 10px; font-family: inherit; }
         .target-box { background: var(--deep-navy); color: #d4af37; padding: 12px; border-radius: 10px; margin-top: 5px; font-weight: 800; text-align: center; }
+
+        .legal-notice {
+            background: #fff0f0; 
+            border-left: 5px solid #ff4444; 
+            padding: 15px; 
+            margin-top: 25px; 
+            border-radius: 8px; 
+            font-size: 0.85rem;
+            color: #333;
+            text-align: left;
+        }
 
         footer { background: #000; padding: 50px; text-align: center; border-top: 2px solid #d4af37; font-size: 0.8rem; letter-spacing: 2px; }
 
@@ -193,21 +203,22 @@
             <div class="step-item">
                 <div class="number">1</div>
                 <h4>Registration</h4>
-                <p>Complete the secure digital application form with accurate academic data and personal details.</p>
+                <p>Complete the secure digital application form with accurate academic data.</p>
             </div>
             <div class="step-item">
                 <div class="number">2</div>
-                <h4>Vetting</h4>
-                <p>Our board performs a rigorous audit, contacting school authorities and verifying all uploaded letters.</p>
+                <h4>Verification</h4>
+                <p>Our board performs a rigorous audit, contacting school authorities.</p>
             </div>
             <div class="step-item">
                 <div class="number">3</div>
                 <h4>Grant Award</h4>
-                <p>Successful candidates receive full funding for their selected examination registration fees.</p>
+                <p>Successful candidates receive full funding for their registration fees.</p>
             </div>
         </div>
     </section>
 
+    <!-- FORM MODAL -->
     <div id="applyModal" class="modal">
         <div class="modal-content">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
@@ -215,51 +226,118 @@
                 <span style="cursor:pointer; font-size:30px; font-weight: 900; color: #ddd;" onclick="closeForm()">&times;</span>
             </div>
             
-            <form id="scholarshipForm"action="https://formspree.io/f/xjglwyae" method="POST" enctype="multipart/form-data"></form>>
-                <label>Full Legal Name</label>
-                <input type="text" placeholder="Surname First" required>
+            <form id="scholarshipForm" action="https://forminit.com/f/k2equ1a2fbc" method="POST" enctype="multipart/form-data">
+                <label>Target Exam Selection</label>
+                <div class="target-box" id="examDisplay">--</div>
+                <input type="hidden" name="fi-select-exam" id="examInput">
+
+                <label>Full Name</label>
+                <input type="text" name="fi-sender-fullName" placeholder="Surname First Name" required>
 
                 <label>State of Origin</label>
-                <select required>
-                    <option value="">-- Choose State --</option>
-                    <option>Lagos</option><option>Kano</option><option>Rivers</option><option>Enugu</option><option>Oyo</option>
+                <select name="fi-select-state" required>
+                    <option value="">-- Select Your State --</option>
+                    <option value="Abia">Abia</option>
+                    <option value="Adamawa">Adamawa</option>
+                    <option value="Akwa Ibom">Akwa Ibom</option>
+                    <option value="Anambra">Anambra</option>
+                    <option value="Bauchi">Bauchi</option>
+                    <option value="Bayelsa">Bayelsa</option>
+                    <option value="Benue">Benue</option>
+                    <option value="Borno">Borno</option>
+                    <option value="Cross River">Cross River</option>
+                    <option value="Delta">Delta</option>
+                    <option value="Ebonyi">Ebonyi</option>
+                    <option value="Edo">Edo</option>
+                    <option value="Ekiti">Ekiti</option>
+                    <option value="Enugu">Enugu</option>
+                    <option value="FCT">FCT (Abuja)</option>
+                    <option value="Gombe">Gombe</option>
+                    <option value="Imo">Imo</option>
+                    <option value="Jigawa">Jigawa</option>
+                    <option value="Kaduna">Kaduna</option>
+                    <option value="Kano">Kano</option>
+                    <option value="Katsina">Katsina</option>
+                    <option value="Kebbi">Kebbi</option>
+                    <option value="Kogi">Kogi</option>
+                    <option value="Kwara">Kwara</option>
+                    <option value="Lagos">Lagos</option>
+                    <option value="Nasarawa">Nasarawa</option>
+                    <option value="Niger">Niger</option>
+                    <option value="Ogun">Ogun</option>
+                    <option value="Ondo">Ondo</option>
+                    <option value="Osun">Osun</option>
+                    <option value="Oyo">Oyo</option>
+                    <option value="Plateau">Plateau</option>
+                    <option value="Rivers">Rivers</option>
+                    <option value="Sokoto">Sokoto</option>
+                    <option value="Taraba">Taraba</option>
+                    <option value="Yobe">Yobe</option>
+                    <option value="Zamfara">Zamfara</option>
                 </select>
 
-                <label>Target Exam</label>
-                <div class="target-box" id="examDisplay">--</div>
+                <label>Motivation Statement</label>
+                <textarea name="fi-text-message" rows="4" placeholder="How will this scholarship change your life?" required></textarea>
 
-                <label>Motivation Statement</label>oooooooooooooooooooooooo
+                <label>Principal's Full Name</label>
+                <input type="text" name="fi-text-principal" placeholder="Enter Principal's Name" required>
 
+                <label>Principal's Contact (International Format)</label>
+                <input type="tel" 
+                       name="fi-sender-phone" 
+                       id="phone" 
+                       placeholder="+2348031234567" 
+                       pattern="^\+234[0-9]{10}$" 
+                       title="Please enter your number starting with +234 followed by the 10 digits" 
+                       required>
+                <small style="color: #666; font-size: 0.7rem; display: block; margin-top: 5px;">
+                    Must start with +234 (e.g., +2348035550000)
+                </small>
 
+                <label>Upload Recommendation Letter</label>
+                <input type="file" name="fi-file-attachment" id="fileUpload" accept=".pdf,.jpg,.jpeg,.png" required>
+                <small style="color: #666; font-size: 0.75rem; display: block; margin-top: 5px;">
+                    Supported formats: PDF, JPG, or PNG (Max 2MB).
+                </small>
 
+                <div class="legal-notice">
+                    <p style="margin-bottom: 10px;">
+                        <b style="color: #ff4444; text-transform: uppercase;">Legal Notice:</b> 
+                        By clicking submit, you authorize an academic audit.
+                    </p>
+                    <div style="display: flex; align-items: flex-start; gap: 10px; background: rgba(0,0,0,0.05); padding: 10px; border-radius: 5px;">
+                        <input type="checkbox" name="fi-checkbox-consent" id="consent" value="yes" required>
+                        <label for="consent" style="margin-top: 0; color: #333; text-transform: none; font-weight: 600; cursor: pointer;">
+                            I confirm all provided data is authentic.
+                        </label>
+                    </div>
+                </div>
 
+                <button type="submit" class="apply-btn" style="margin-top: 20px;">Submit Application</button>
+            </form>
+        </div>
+    </div>
 
+    <footer>
+        <p style="color: #d4af37; font-weight: 800;">"Education is the only investment where the interest is paid back in freedom."</p>
+        <p style="margin-top: 10px; font-size: 0.7rem;">&copy; 2026 AMAA SCHOLARSHIP FOUNDATION.</p>
+    </footer>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <script>
+        function openForm(type) {
+            document.getElementById('applyModal').style.display = "block";
+            document.getElementById('examDisplay').innerText = type;
+            document.getElementById('examInput').value = type;
+            document.getElementById('formTitle').innerText = type + " Application";
+            document.body.style.overflow = "hidden";
+        }
+        function closeForm() {
+            document.getElementById('applyModal').style.display = "none";
+            document.body.style.overflow = "auto";
+        }
+    </script>
+</body>
+    </html>
 
 
 
