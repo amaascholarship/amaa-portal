@@ -25,7 +25,6 @@
             overflow-x: hidden;
         }
 
-        /* TOP BAR */
         .top-bar {
             background: rgba(0, 18, 38, 0.95);
             backdrop-filter: blur(10px);
@@ -70,7 +69,6 @@
             text-transform: uppercase;
         }
 
-        /* HEADER */
         .page-header {
             background: linear-gradient(to bottom, rgba(0, 42, 82, 0.7), #001226), 
                         url('https://i.ibb.co/r2t97fQH/AZ2-Yo-H2u4cn00-Pem-XLNU9-Q-AZ2-Yo-H2u4-ZDr6xl7p9-HODg-20260417-003101-0000.png');
@@ -90,7 +88,6 @@
             font-weight: 900;
         }
 
-        /* POLICY GLASS CARDS */
         .requirement-section { margin: -50px 5% 40px; display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
         .policy-card { 
             background: rgba(255, 255, 255, 0.05);
@@ -104,7 +101,6 @@
         .policy-list li { margin-bottom: 15px; font-size: 0.9rem; list-style: none; padding-left: 25px; position: relative; }
         .policy-list li::before { content: "✦"; position: absolute; left: 0; color: #d4af37; font-weight: bold; }
 
-        /* EXAM GRID */
         .exam-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; padding: 0 5% 60px; }
         .exam-card { 
             background: linear-gradient(145deg, #002a52, #001a35);
@@ -121,7 +117,6 @@
             font-weight: 900; text-transform: uppercase; width: 100%; cursor: pointer; border-radius: 12px;
         }
 
-        /* ROADMAP */
         .roadmap { padding: 80px 10%; text-align: center; background: rgba(255,255,255,0.02); }
         .roadmap h2 { font-family: 'Montserrat', sans-serif; font-size: 2.2rem; margin-bottom: 50px; background: var(--gold-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         .steps-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; }
@@ -133,7 +128,6 @@
         .step-item h4 { font-family: 'Montserrat'; font-weight: 800; text-transform: uppercase; margin-bottom: 15px; color: #f2d06b; }
         .step-item p { font-size: 0.9rem; opacity: 0.8; line-height: 1.7; }
 
-        /* MODAL */
         .modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); overflow-y: auto; }
         .modal-content { background: #fff; margin: 2vh auto; padding: 35px; width: 95%; max-width: 500px; border-radius: 25px; color: var(--deep-navy); position: relative; }
         label { font-weight: 800; display: block; margin-top: 15px; font-size: 0.75rem; text-transform: uppercase; color: #777; }
@@ -163,7 +157,7 @@
             <span style="background: var(--live-green); width: 12px; height: 12px; border-radius: 50%; box-shadow: 0 0 10px var(--live-green);"></span>
             Portal Secure & Live
         </div>
-        <a href="index.html" class="back-home">Back to Home</a>
+        <a href="#" class="back-home">Back to Home</a>
     </div>
 
     <header class="page-header">
@@ -218,9 +212,6 @@
         </div>
     </section>
 
-
-    
-    <!-- FORM MODAL -->
     <div id="applyModal" class="modal">
         <div class="modal-content">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
@@ -239,44 +230,11 @@
                 <label>State of Origin</label>
                 <select name="fi-select-state" required>
                     <option value="">-- Select Your State --</option>
-                    <option value="Abia">Abia</option>
-                    <option value="Adamawa">Adamawa</option>
-                    <option value="Akwa Ibom">Akwa Ibom</option>
-                    <option value="Anambra">Anambra</option>
-                    <option value="Bauchi">Bauchi</option>
-                    <option value="Bayelsa">Bayelsa</option>
-                    <option value="Benue">Benue</option>
-                    <option value="Borno">Borno</option>
-                    <option value="Cross River">Cross River</option>
-                    <option value="Delta">Delta</option>
-                    <option value="Ebonyi">Ebonyi</option>
-                    <option value="Edo">Edo</option>
-                    <option value="Ekiti">Ekiti</option>
-                    <option value="Enugu">Enugu</option>
-                    <option value="FCT">FCT (Abuja)</option>
-                    <option value="Gombe">Gombe</option>
-                    <option value="Imo">Imo</option>
-                    <option value="Jigawa">Jigawa</option>
-                    <option value="Kaduna">Kaduna</option>
-                    <option value="Kano">Kano</option>
-                    <option value="Katsina">Katsina</option>
-                    <option value="Kebbi">Kebbi</option>
-                    <option value="Kogi">Kogi</option>
-                    <option value="Kwara">Kwara</option>
-                    <option value="Lagos">Lagos</option>
-                    <option value="Nasarawa">Nasarawa</option>
-                    <option value="Niger">Niger</option>
-                    <option value="Ogun">Ogun</option>
-                    <option value="Ondo">Ondo</option>
-                    <option value="Osun">Osun</option>
-                    <option value="Oyo">Oyo</option>
-                    <option value="Plateau">Plateau</option>
-                    <option value="Rivers">Rivers</option>
-                    <option value="Sokoto">Sokoto</option>
-                    <option value="Taraba">Taraba</option>
-                    <option value="Yobe">Yobe</option>
-                    <option value="Zamfara">Zamfara</option>
-                </select>
+                    <option value="Abia">Abia</option><option value="Adamawa">Adamawa</option>
+                    <option value="Akwa Ibom">Akwa Ibom</option><option value="Anambra">Anambra</option>
+                    <option value="Kwara">Kwara</option><option value="Lagos">Lagos</option>
+                    <option value="Oyo">Oyo</option><option value="Ogun">Ogun</option>
+                    </select>
 
                 <label>Motivation Statement</label>
                 <textarea name="fi-text-message" rows="4" placeholder="How will this scholarship change your life?" required></textarea>
@@ -284,36 +242,11 @@
                 <label>Principal's Full Name</label>
                 <input type="text" name="fi-text-principal" placeholder="Enter Principal's Name" required>
 
-                <label>Principal's Contact (International Format)</label>
-                <input type="tel" 
-                       name="fi-sender-phone" 
-                       id="phone" 
-                       placeholder="+2348031234567" 
-                       pattern="^\+234[0-9]{10}$" 
-                       title="Please enter your number starting with +234 followed by the 10 digits" 
-                       required>
-                <small style="color: #666; font-size: 0.7rem; display: block; margin-top: 5px;">
-                    Must start with +234 (e.g., +2348035550000)
-                </small>
+                <label>Principal's Contact</label>
+                <input type="tel" name="fi-sender-phone" placeholder="+2348031234567" required>
 
                 <label>Upload Recommendation Letter</label>
                 <input type="file" name="fi-file-attachment" id="fileUpload" accept=".pdf,.jpg,.jpeg,.png" required>
-                <small style="color: #666; font-size: 0.75rem; display: block; margin-top: 5px;">
-                    Supported formats: PDF, JPG, or PNG (Max 2MB).
-                </small>
-
-                <div class="legal-notice">
-                    <p style="margin-bottom: 10px;">
-                        <b style="color: #ff4444; text-transform: uppercase;">Legal Notice:</b> 
-                        By clicking submit, you authorize an academic audit.
-                    </p>
-                    <div style="display: flex; align-items: flex-start; gap: 10px; background: rgba(0,0,0,0.05); padding: 10px; border-radius: 5px;">
-                        <input type="checkbox" name="fi-checkbox-consent" id="consent" value="yes" required>
-                        <label for="consent" style="margin-top: 0; color: #333; text-transform: none; font-weight: 600; cursor: pointer;">
-                            I confirm all provided data is authentic.
-                        </label>
-                    </div>
-                </div>
 
                 <button type="submit" class="apply-btn" style="margin-top: 20px;">Submit Application</button>
             </form>
@@ -339,137 +272,4 @@
         }
     </script>
 </body>
-    </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                    </html>
