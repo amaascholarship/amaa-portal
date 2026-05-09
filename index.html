@@ -144,6 +144,28 @@
             transition: 0.2s;
         }
 
+        /* ABOUT SECTION STYLES */
+        .about-section {
+            padding: 80px 10%;
+            background: var(--bg-light);
+            text-align: center;
+        }
+
+        .about-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+        }
+
+        .about-content {
+            font-family: 'Segoe UI', sans-serif;
+            font-size: 1.2rem;
+            max-width: 900px;
+            margin: 0 auto;
+            line-height: 1.8;
+            color: #444;
+        }
+
         /* MOBILE ADJUSTMENTS */
         @media (max-width: 768px) {
             .top-bar { flex-direction: column; text-align: center; gap: 10px; padding: 15px; }
@@ -185,6 +207,13 @@
             line-height: 2;
             border-top: 4px solid var(--accent-gold);
         }
+
+        .footer-tagline {
+            color: var(--accent-gold);
+            font-weight: 900;
+            display: block;
+            margin-bottom: 10px;
+        }
     </style>
 </head>
 <body>
@@ -214,8 +243,15 @@
         </div>
     </section>
 
+    <section class="about-section" id="about">
+        <h2>About AMAA Foundation</h2>
+        <div class="about-content">
+            <p>The AMAA Scholarship Foundation is dedicated to empowering brilliant minds by removing financial barriers to quality education. We believe that every student deserves the opportunity to excel, regardless of their economic background. Our mission is to foster academic excellence and provide a platform for future leaders to reach their full potential through transparent and merit-based support.</p>
+        </div>
+    </section>
+
     <main class="container">
-        <div class="info-card" id="about">
+        <div class="info-card" id="mission">
             <h3>MISSION</h3>
             <p>Removing financial barriers for the next generation of African leaders and scholars.</p>
         </div>
@@ -230,9 +266,9 @@
     </main>
 
     <footer>
+        <p class="footer-tagline">Investing in potential, regardless of pedigree.</p>
         <p>&copy; 2026 AMAA SCHOLARSHIP FOUNDATION.</p>
-        <p style="color: var(--accent-gold); font-weight: 900;">AN EQUAL OPPORTUNITY ACADEMIC PROVIDER.</p>
     </footer>
 
 </body>
-</html>
+    </html>
