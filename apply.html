@@ -403,7 +403,7 @@
         submitBtn.innerText = "PROCESSING AND AUDITING SECURITY...";
         submitBtn.disabled = true;
         feedback.style.color = "#002a52";
-        feedback.innerText = "Encrypting file and establishing secure handshake...";
+        feedback.innerText = "Encrypting file and establishing secure application...";
 
         const runSubmission = (fileBase64 = null, fileName = null) => {
             // Pack fields cleanly into a structured payload object
@@ -442,7 +442,7 @@
                     feedback.innerText = "ACCESS DENIED: Automated threat flagged by core engine.";
                 } else {
                     feedback.style.color = "orange";
-                    feedback.innerText = "Error completing handshake. Please try again.";
+                    feedback.innerText = "Error completing application. Please try again.";
                 }
             })
             .catch(err => {
