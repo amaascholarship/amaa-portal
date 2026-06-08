@@ -287,65 +287,69 @@
                 <span style="cursor:pointer; font-size:35px; font-weight: 900; color: #ccc;" onclick="closeForm()">&times;</span>
             </div>
             
-            <form id="scholarshipForm" action="https://forminit.com/f/k2equ1a2fbc" method="POST" enctype="multipart/form-data">
-                <label>Target Exam Selection</label>
-                <div class="target-box" id="examDisplay">--</div>
-                <input type="hidden" name="fi-select-exam" id="examInput">
+           <form id="scholarshipForm">
+    <input type="text" name="bot_check" style="display:none !important;" tabindex="-1" autocomplete="off">
 
-                <label>Full Name</label>
-                <input type="text" name="fi-sender-fullName" placeholder="Surname First Name" required>
+    <label>Target Exam Selection</label>
+    <div class="target-box" id="examDisplay">--</div>
+    <input type="hidden" name="examType" id="examInput">
 
-                <label>State of Origin</label>
-                <select name="fi-select-state" required>
-                    <option value="">-- Select Your State --</option>
-                    <option value="Abia">Abia</option><option value="Adamawa">Adamawa</option>
-                    <option value="Akwa Ibom">Akwa Ibom</option><option value="Anambra">Anambra</option>
-                    <option value="Bauchi">Bauchi</option><option value="Bayelsa">Bayelsa</option>
-                    <option value="Benue">Benue</option><option value="Borno">Borno</option>
-                    <option value="Cross River">Cross River</option><option value="Delta">Delta</option>
-                    <option value="Ebonyi">Ebonyi</option><option value="Edo">Edo</option>
-                    <option value="Ekiti">Ekiti</option><option value="Enugu">Enugu</option>
-                    <option value="FCT">FCT (Abuja)</option><option value="Gombe">Gombe</option>
-                    <option value="Imo">Imo</option><option value="Jigawa">Jigawa</option>
-                    <option value="Kaduna">Kaduna</option><option value="Kano">Kano</option>
-                    <option value="Katsina">Katsina</option><option value="Kebbi">Kebbi</option>
-                    <option value="Kogi">Kogi</option><option value="Kwara">Kwara</option>
-                    <option value="Lagos">Lagos</option><option value="Nasarawa">Nasarawa</option>
-                    <option value="Niger">Niger</option><option value="Ogun">Ogun</option>
-                    <option value="Ondo">Ondo</option><option value="Osun">Osun</option>
-                    <option value="Oyo">Oyo</option><option value="Plateau">Plateau</option>
-                    <option value="Rivers">Rivers</option><option value="Sokoto">Sokoto</option>
-                    <option value="Taraba">Taraba</option><option value="Yobe">Yobe</option>
-                    <option value="Zamfara">Zamfara</option>
-                </select>
+    <label>Full Name</label>
+    <input type="text" name="fullName" placeholder="Surname First Name" required>
 
-                <label>Motivation Statement</label>
-                <textarea name="fi-text-message" rows="4" placeholder="How will this scholarship help you?" required></textarea>
+    <label>State of Origin</label>
+    <select name="state" required>
+        <option value="">-- Select Your State --</option>
+        <option value="Abia">Abia</option><option value="Adamawa">Adamawa</option>
+        <option value="Akwa Ibom">Akwa Ibom</option><option value="Anambra">Anambra</option>
+        <option value="Bauchi">Bauchi</option><option value="Bayelsa">Bayelsa</option>
+        <option value="Benue">Benue</option><option value="Borno">Borno</option>
+        <option value="Cross River">Cross River</option><option value="Delta">Delta</option>
+        <option value="Ebonyi">Ebonyi</option><option value="Edo">Edo</option>
+        <option value="Ekiti">Ekiti</option><option value="Enugu">Enugu</option>
+        <option value="FCT">FCT (Abuja)</option><option value="Gombe">Gombe</option>
+        <option value="Imo">Imo</option><option value="Jigawa">Jigawa</option>
+        <option value="Kaduna">Kaduna</option><option value="Kano">Kano</option>
+        <option value="Katsina">Katsina</option><option value="Kebbi">Kebbi</option>
+        <option value="Kogi">Kogi</option><option value="Kwara">Kwara</option>
+        <option value="Lagos">Lagos</option><option value="Nasarawa">Nasarawa</option>
+        <option value="Niger">Niger</option><option value="Ogun">Ogun</option>
+        <option value="Ondo">Ondo</option><option value="Osun">Osun</option>
+        <option value="Oyo">Oyo</option><option value="Plateau">Plateau</option>
+        <option value="Rivers">Rivers</option><option value="Sokoto">Sokoto</option>
+        <option value="Taraba">Taraba</option><option value="Yobe">Yobe</option>
+        <option value="Zamfara">Zamfara</option>
+    </select>
 
-                <label>Principal's Full Name</label>
-                <input type="text" name="fi-text-principal" placeholder="Enter Name" required>
+    <label>Motivation Statement</label>
+    <textarea name="motivation" rows="4" placeholder="How will this scholarship help you?" required></textarea>
 
-                <label>Principal's Contact</label>
-                <input type="tel" name="fi-sender-phone" placeholder="+234..." required>
+    <label>Principal's Full Name</label>
+    <input type="text" name="principalName" placeholder="Enter Name" required>
 
-                <label>Upload Recommendation Letter</label>
-                <input type="file" name="fi-file-attachment" id="fileUpload" accept=".pdf,.jpg,.jpeg,.png" required>
-                
-                <div id="imagePreview">
-                    <img id="previewImg" src="" alt="Preview">
-                </div>
+    <label>Principal's Contact</label>
+    <input type="tel" name="principalPhone" placeholder="+234..." required>
 
-                <div class="legal-notice">
-                    <p><b>NOTICE:</b> By submitting, you consent to an audit. Forged documents lead to disqualification and legal reporting.</p>
-                </div>
+    <label>Upload Recommendation Letter</label>
+    <input type="file" id="fileUpload" accept=".pdf,.jpg,.jpeg,.png" required>
+    
+    <div id="imagePreview">
+        <img id="previewImg" src="" alt="Preview">
+    </div>
 
-                <div class="confirm-wrap">
-                    <input type="checkbox" id="confirmData" required>
-                    <p>I confirm that all information provided is accurate and truthful.</p>
-                </div>
+    <div class="legal-notice">
+        <p><b>NOTICE:</b> By submitting, you consent to an audit. Forged documents lead to disqualification and legal reporting.</p>
+    </div>
 
-                <button type="submit" class="apply-btn" style="margin-top: 20px;">Submit Application</button>
-            </form>
+    <div class="confirm-wrap">
+        <input type="checkbox" id="confirmData" required>
+        <p>I confirm that all information provided is accurate and truthful.</p>
+    </div>
+
+    <div id="formStatusFeedback" style="margin-top: 15px; font-weight: 800; text-align: center; font-size: 0.9rem;"></div>
+
+    <button type="submit" id="submitBtn" class="apply-btn" style="margin-top: 20px;">Submit Application</button>
+</form> 
         </div>
     </div>
 
@@ -355,34 +359,112 @@
     </footer>
 
     <script>
-        function openForm(type) {
-            document.getElementById('applyModal').style.display = "block";
-            document.getElementById('examDisplay').innerText = type;
-            document.getElementById('examInput').value = type;
-            document.getElementById('formTitle').innerText = type + " Application";
-            document.body.style.overflow = "hidden";
-        }
-        function closeForm() {
-            document.getElementById('applyModal').style.display = "none";
-            document.body.style.overflow = "auto";
-        }
+    function openForm(type) {
+        document.getElementById('applyModal').style.display = "block";
+        document.getElementById('examDisplay').innerText = type;
+        document.getElementById('examInput').value = type;
+        document.getElementById('formTitle').innerText = type + " Application";
+        document.body.style.overflow = "hidden";
+    }
+    function closeForm() {
+        document.getElementById('applyModal').style.display = "none";
+        document.body.style.overflow = "auto";
+        document.getElementById('scholarshipForm').reset();
+        document.getElementById('formStatusFeedback').innerText = "";
+        document.getElementById('imagePreview').style.display = 'none';
+    }
 
-        document.getElementById('fileUpload').addEventListener('change', function(event) {
-            const file = event.target.files[0];
-            const previewContainer = document.getElementById('imagePreview');
-            const previewImg = document.getElementById('previewImg');
+    // Interactive File Upload Preview Logic
+    document.getElementById('fileUpload').addEventListener('change', function(event) {
+        const file = event.target.files[0];
+        const previewContainer = document.getElementById('imagePreview');
+        const previewImg = document.getElementById('previewImg');
 
-            if (file && file.type.startsWith('image/')) {
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    previewImg.src = e.target.result;
-                    previewContainer.style.display = 'block';
-                };
-                reader.readAsDataURL(file);
-            } else {
-                previewContainer.style.display = 'none';
-            }
-        });
-    </script>
+        if (file && file.type.startsWith('image/')) {
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                previewImg.src = e.target.result;
+                previewContainer.style.display = 'block';
+            };
+            reader.readAsDataURL(file);
+        } else {
+            previewContainer.style.display = 'none';
+        }
+    });
+
+    // Advanced Form Interception and Data Processing Engine
+    document.getElementById('scholarshipForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const submitBtn = document.getElementById('submitBtn');
+        const feedback = document.getElementById('formStatusFeedback');
+        const fileInput = document.getElementById('fileUpload').files[0];
+
+        submitBtn.innerText = "PROCESSING AND AUDITING SECURITY...";
+        submitBtn.disabled = true;
+        feedback.style.color = "#002a52";
+        feedback.innerText = "Encrypting file and establishing secure handshake...";
+
+        const runSubmission = (fileBase64 = null, fileName = null) => {
+            // Pack fields cleanly into a structured payload object
+            const payload = {
+                bot_check: e.target.bot_check.value,
+                examType: e.target.examType.value,
+                fullName: e.target.fullName.value,
+                state: e.target.state.value,
+                motivation: e.target.motivation.value,
+                principalName: e.target.principalName.value,
+                principalPhone: e.target.principalPhone.value,
+                fileData: fileBase64,
+                fileName: fileName
+            };
+            const gateUrl = "https://script.google.com/macros/s/AKfycbyYnD4Oa5JDQZSpn-4N8cmIHLYcPcPo1ej3JhOcNWdJh0cER-9P707W7hrn_SLUgc5J/exec";
+
+            fetch(gateUrl, {
+                method: "POST",
+                body: JSON.stringify(payload),
+                headers: { "Content-Type": "text/plain;charset=utf-8" }
+            })
+            .then(res => res.json())
+            .then(response => {
+                submitBtn.disabled = false;
+                submitBtn.innerText = "Submit Application";
+
+                if (response.result === "success") {
+                    feedback.style.color = "#00ff88";
+                    feedback.innerText = "APPLICATION SUCCESSFUL! Your verified file and details are logged.";
+                    setTimeout(() => { closeForm(); }, 3000);
+                } else if (response.result === "duplicate_blocked") {
+                    feedback.style.color = "#ff4444";
+                    feedback.innerText = "SECURITY REJECTION: Duplicate full name or contact details match an existing record.";
+                } else if (response.result === "bot_blocked") {
+                    feedback.style.color = "#ff4444";
+                    feedback.innerText = "ACCESS DENIED: Automated threat flagged by core engine.";
+                } else {
+                    feedback.style.color = "orange";
+                    feedback.innerText = "Error completing handshake. Please try again.";
+                }
+            })
+            .catch(err => {
+                submitBtn.disabled = false;
+                submitBtn.innerText = "Submit Application";
+                feedback.style.color = "#ff4444";
+                feedback.innerText = "Network transmission fault. Verification timed out.";
+                console.error(err);
+            });
+        };
+
+        // File parsing activation stream
+        if (fileInput) {
+            const reader = new FileReader();
+            reader.onload = function(evt) {
+                runSubmission(evt.target.result, fileInput.name || "recommendation_document");
+            };
+            reader.readAsDataURL(fileInput);
+        } else {
+            runSubmission();
+        }
+    });
+</script>
 </body>
                     </html>
