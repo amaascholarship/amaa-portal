@@ -4,6 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AMAA Scholarship | Official Application Portal</title>
+    <!-- Open Graph / Social Media Preview Meta Tags -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="AMAA Scholarship | Official Application Portal" />
+    <meta property="og:description" content="Submit your application for the AMAA Scholarship Foundation external exam grants." />
+    <meta property="og:image" content="https://i.ibb.co/Zw0d6SC/scholarship.png" />
+
+    <!-- Twitter Preview Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="AMAA Scholarship | Official Application Portal" />
+    <meta name="twitter:description" content="Submit your application for the AMAA Scholarship Foundation external exam grants." />
+    <meta name="twitter:image" content="https://i.ibb.co/Zw0d6SC/scholarship.png" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
         :root { 
@@ -69,7 +80,7 @@
         /* HEADER SECTION */
         .page-header {
             background: linear-gradient(to bottom, rgba(0, 18, 38, 0.8), #001226), 
-                        url('https://i.ibb.co/r2t97fQH/AZ2-Yo-H2u4cn00-Pem-XLNU9-Q-AZ2-Yo-H2u4-ZDr6xl7p9-HODg-20260417-003101-0000.png');
+                        url('https://i.ibb.co/Zw0d6SC/scholarship.png');
             background-size: cover;
             background-position: center;
             padding: 120px 10% 100px;
@@ -321,8 +332,10 @@
         <option value="Zamfara">Zamfara</option>
     </select>
 
-    <label>Motivation Statement</label>
-    <textarea name="motivation" rows="4" placeholder="How will this scholarship help you?" required></textarea>
+    <label>Motivation Statement (Minimum 500 words)</label>
+<textarea name="motivation" id="motivationInput" rows="7" placeholder="Describe your background, financial need, and how this grant will impact your future (at least 500 words)..." required></textarea>
+<div id="wordCountDisplay" style="font-size: 0.8rem; margin-top: 6px; font-weight: 700; color: #ff4444;">
+    Word count: <span id="wordCount">0</span> / 500 words required
 
     <label>Principal's Full Name</label>
     <input type="text" name="principalName" placeholder="Enter Name" required>
