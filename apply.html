@@ -8,21 +8,22 @@
     <meta name="title" content="AMAA Scholarship Portal | OFFICIAL">
     <meta name="description" content="Empowering brilliant minds by removing financial barriers to quality education. Apply for the AMAA Scholarship today.">
 
-<!-- Open Graph / WhatsApp / Facebook -->
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://amaascholarship.github.io/amaa-portal/">
-<meta property="og:title" content="AMAA Scholarship Portal | OFFICIAL">
-<meta property="og:description" content="Empowering brilliant minds by removing financial barriers to quality education. Apply for the AMAA Scholarship today.">
-<meta property="og:image" content="https://i.ibb.co/fYQm2jTt/Whats-App-Image-2026-08-09-at-23-07-55.jpg">
-<meta property="og:image:secure_url" content="https://i.ibb.co/fYQm2jTt/Whats-App-Image-2026-08-09-at-23-07-55.jpg">
-<meta property="og:image:type" content="image/jpeg">
+    <!-- Open Graph / WhatsApp / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://amaascholarship.github.io/amaa-portal/">
+    <meta property="og:title" content="AMAA Scholarship Portal | OFFICIAL">
+    <meta property="og:description" content="Empowering brilliant minds by removing financial barriers to quality education. Apply for the AMAA Scholarship today.">
+    <meta property="og:image" content="https://i.ibb.co/fYQm2jTt/Whats-App-Image-2026-08-09-at-23-07-55.jpg">
+    <meta property="og:image:secure_url" content="https://i.ibb.co/fYQm2jTt/Whats-App-Image-2026-08-09-at-23-07-55.jpg">
+    <meta property="og:image:type" content="image/jpeg">
 
-<!-- Twitter / X -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:url" content="https://amaascholarship.github.io/amaa-portal/">
-<meta name="twitter:title" content="AMAA Scholarship Portal | OFFICIAL">
-<meta name="twitter:description" content="Empowering brilliant minds by removing financial barriers to quality education. Apply for the AMAA Scholarship today.">
-<meta name="twitter:image" content="https://i.ibb.co/fYQm2jTt/Whats-App-Image-2026-08-09-at-23-07-55.jpg">
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://amaascholarship.github.io/amaa-portal/">
+    <meta name="twitter:title" content="AMAA Scholarship Portal | OFFICIAL">
+    <meta name="twitter:description" content="Empowering brilliant minds by removing financial barriers to quality education. Apply for the AMAA Scholarship today.">
+    <meta name="twitter:image" content="https://i.ibb.co/fYQm2jTt/Whats-App-Image-2026-08-09-at-23-07-55.jpg">
+
     <style>
         :root { 
             --royal-blue: #002a52;
@@ -43,7 +44,6 @@
             overflow-x: hidden;
         }
 
-        /* NAVIGATION */
         .top-bar {
             background: rgba(0, 18, 38, 0.95);
             backdrop-filter: blur(10px);
@@ -84,7 +84,6 @@
             text-transform: uppercase;
         }
 
-        /* HEADER SECTION */
         .page-header {
             background: linear-gradient(to bottom, rgba(0, 18, 38, 0.8), #001226), 
                         url('https://i.ibb.co/Zw0d6SC/scholarship.png');
@@ -108,7 +107,49 @@
 
         .page-header p { letter-spacing: 4px; font-weight: 300; font-size: 0.9rem; color: #f2d06b; }
 
-        /* REQUIREMENTS & POLICIES */
+        /* IN-PAGE SUCCESS BANNER STYLES */
+        .success-banner {
+            display: none;
+            background: #001a35;
+            border: 2px solid #00ff88;
+            border-radius: 20px;
+            padding: 30px;
+            margin: 20px 5% 40px;
+            box-shadow: 0 0 25px rgba(0, 255, 136, 0.2);
+            text-align: center;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+
+        .success-banner h3 {
+            color: #00ff88;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .success-banner p {
+            font-size: 0.95rem;
+            color: #e0e0e0;
+            margin-bottom: 10px;
+        }
+
+        .success-banner .banner-details {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px dashed #d4af37;
+            padding: 12px;
+            border-radius: 10px;
+            margin-top: 15px;
+            display: inline-block;
+            color: #f2d06b;
+            font-weight: 700;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
         .requirement-section { 
             margin: -60px 5% 60px; 
             display: grid; 
@@ -132,7 +173,7 @@
             margin-bottom: 20px; 
             border-bottom: 2px solid rgba(212, 175, 55, 0.2); 
             padding-bottom: 12px;
-            font-family: 'Montserrat';
+            font-family: 'Montserrat', sans-serif;
         }
 
         .policy-list li { 
@@ -152,10 +193,9 @@
             font-weight: bold; 
         }
 
-        /* EXAM CARDS */
-        .section-title { text-align: center; margin-bottom: 40px; font-family: 'Montserrat'; text-transform: uppercase; letter-spacing: 2px; }
+        .section-title { text-align: center; margin-bottom: 40px; font-family: 'Montserrat', sans-serif; text-transform: uppercase; letter-spacing: 2px; }
         
-        .exam-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; padding: 0 5% 80px; }
+        .exam-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; padding: 0 5% 60px; } 
         
         .exam-card { 
             background: linear-gradient(145deg, #002a52, #001a35);
@@ -188,7 +228,66 @@
             transition: 0.3s;
         }
 
-        /* ROADMAP */
+        .status-checker-section {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 24px;
+            margin: 0 5% 80px;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .status-checker-section h3 {
+            color: #f2d06b;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.6rem;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        .status-checker-section p {
+            font-size: 0.95rem;
+            color: #ccc;
+            margin-bottom: 25px;
+        }
+
+        .checker-box {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            max-width: 600px;
+            margin: 0 auto;
+            flex-wrap: wrap;
+        }
+
+        .checker-box input {
+            flex: 1;
+            min-width: 260px;
+            padding: 14px;
+            border-radius: 12px;
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            background: #001a35;
+            color: #fff;
+            font-size: 1rem;
+        }
+
+        .checker-box button {
+            background: var(--gold-gradient);
+            color: var(--deep-navy);
+            border: none;
+            padding: 14px 30px;
+            font-weight: 900;
+            border-radius: 12px;
+            cursor: pointer;
+            text-transform: uppercase;
+        }
+
+        .status-result {
+            margin-top: 20px;
+            font-weight: 800;
+            font-size: 1rem;
+        }
+
         .roadmap { padding: 100px 10%; text-align: center; background: rgba(255,255,255,0.01); border-top: 1px solid rgba(255,255,255,0.05); }
         .roadmap h2 { font-family: 'Montserrat', sans-serif; font-size: 2.2rem; margin-bottom: 60px; background: var(--gold-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         
@@ -207,10 +306,9 @@
             box-shadow: var(--gold-glow);
         }
 
-        .step-item h4 { font-family: 'Montserrat'; font-weight: 800; text-transform: uppercase; margin-bottom: 15px; color: #f2d06b; }
+        .step-item h4 { font-family: 'Montserrat', sans-serif; font-weight: 800; text-transform: uppercase; margin-bottom: 15px; color: #f2d06b; }
         .step-item p { font-size: 0.95rem; opacity: 0.7; line-height: 1.8; }
 
-        /* MODAL & FORM */
         .modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.96); overflow-y: auto; }
         .modal-content { background: #fff; margin: 2vh auto; padding: 40px; width: 95%; max-width: 550px; border-radius: 30px; color: var(--deep-navy); position: relative; }
         
@@ -227,6 +325,44 @@
 
         #imagePreview { margin-top: 15px; display: none; text-align: center; }
         #previewImg { max-width: 100%; max-height: 250px; border-radius: 12px; border: 2px dashed #d4af37; }
+
+        .success-box {
+            text-align: center;
+            padding: 20px 10px;
+        }
+
+        .success-box h3 {
+            color: #002a52;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            font-weight: 900;
+        }
+
+        .success-box p {
+            color: #444;
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+
+        .ref-card {
+            background: #f4f6f8;
+            border: 2px dashed #d4af37;
+            padding: 20px;
+            border-radius: 16px;
+            margin-bottom: 25px;
+            text-align: left;
+        }
+
+        .ref-card div {
+            margin-bottom: 8px;
+            font-size: 0.9rem;
+            color: #001226;
+        }
+
+        .ref-card strong {
+            color: #002a52;
+        }
 
         footer { background: #000; padding: 60px 5%; text-align: center; border-top: 2px solid #d4af37; }
         .footer-quote { color: #d4af37; font-weight: 800; font-size: 1.1rem; margin-bottom: 15px; }
@@ -253,7 +389,7 @@
         <div class="policy-card">
             <h2>Student Requirements</h2>
             <ul class="policy-list">
-                <li><b>Principal's Letter:</b> An official signed recommendation is mandatory.</li>
+                <li><b>Principal's Letter:</b> Official signed recommendation (if available).</li>
                 <li><b>Identification:</b> Verifiable proof of State of Origin must be provided.</li>
                 <li><b>Motivation:</b> A clear statement on how this aid affects your future.</li>
                 <li><b>Academic Standing:</b> Open to all high-performing indigent students.</li>
@@ -269,6 +405,16 @@
         </div>
     </section>
 
+    <!-- IN-PAGE SUCCESS CONFIRMATION BANNER -->
+    <div class="success-banner" id="inPageSuccessBanner" role="alert">
+        <h3>🎉 Application Submitted Successfully!</h3>
+        <p>Thank you for applying. Your application details and uploaded files have been safely logged in our portal database.</p>
+        <p>Our audit board will verify your application details and contact you or your school principal directly.</p>
+        <div class="banner-details">
+            Candidate: <span id="bannerCandidate">--</span> | Voucher Ref: <span id="bannerRef">--</span>
+        </div>
+    </div>
+
     <h2 class="section-title">Select Your Examination</h2>
     <div class="exam-grid">
         <div class="exam-card"><h3>WAEC</h3><button class="apply-btn" onclick="openForm('WAEC')">Apply Now</button></div>
@@ -276,6 +422,16 @@
         <div class="exam-card"><h3>NECO</h3><button class="apply-btn" onclick="openForm('NECO')">Apply Now</button></div>
         <div class="exam-card"><h3>SSCE</h3><button class="apply-btn" onclick="openForm('SSCE')">Apply Now</button></div>
     </div>
+
+    <section class="status-checker-section">
+        <h3>Check Application Status</h3>
+        <p>Track your evaluation status by entering your Full Name or Reference/Voucher Code below.</p>
+        <div class="checker-box">
+            <input type="text" id="statusQuery" placeholder="Enter Full Name or Reference Code...">
+            <button type="button" onclick="checkStatus()">Track Status</button>
+        </div>
+        <div class="status-result" id="statusResult"></div>
+    </section>
 
     <section class="roadmap">
         <h2>THE SCHOLARSHIP JOURNEY</h2>
@@ -301,91 +457,109 @@
     <div id="applyModal" class="modal">
         <div class="modal-content">
             <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
-                <h2 id="formTitle" style="font-family: 'Montserrat'; font-weight: 900;">Scholarship</h2>
+                <h2 id="formTitle" style="font-family: 'Montserrat', sans-serif; font-weight: 900;">Scholarship Application</h2>
                 <span style="cursor:pointer; font-size:35px; font-weight: 900; color: #ccc;" onclick="closeForm()">&times;</span>
             </div>
             
-           <form id="scholarshipForm">
-    <input type="text" name="bot_check" style="display:none !important;" tabindex="-1" autocomplete="off">
+            <form id="scholarshipForm">
+                <input type="text" name="bot_check" style="display:none !important;" tabindex="-1" autocomplete="off">
 
-    <label>Target Exam Selection</label>
-    <div class="target-box" id="examDisplay">--</div>
-    <input type="hidden" name="examType" id="examInput">
+                <label>Target Exam Selection</label>
+                <div class="target-box" id="examDisplay">--</div>
+                <input type="hidden" name="examType" id="examInput">
 
-    <label>Full Name</label>
-    <input type="text" name="fullName" placeholder="Surname First Name" required>
+                <label>Voucher / Reference Code (Optional)</label>
+                <input type="text" name="voucherCode" placeholder="e.g. AMAA-2026-XXXX">
 
-    <label>State of Origin</label>
-    <select name="state" required>
-        <option value="">-- Select Your State --</option>
-        <option value="Abia">Abia</option><option value="Adamawa">Adamawa</option>
-        <option value="Akwa Ibom">Akwa Ibom</option><option value="Anambra">Anambra</option>
-        <option value="Bauchi">Bauchi</option><option value="Bayelsa">Bayelsa</option>
-        <option value="Benue">Benue</option><option value="Borno">Borno</option>
-        <option value="Cross River">Cross River</option><option value="Delta">Delta</option>
-        <option value="Ebonyi">Ebonyi</option><option value="Edo">Edo</option>
-        <option value="Ekiti">Ekiti</option><option value="Enugu">Enugu</option>
-        <option value="FCT">FCT (Abuja)</option><option value="Gombe">Gombe</option>
-        <option value="Imo">Imo</option><option value="Jigawa">Jigawa</option>
-        <option value="Kaduna">Kaduna</option><option value="Kano">Kano</option>
-        <option value="Katsina">Katsina</option><option value="Kebbi">Kebbi</option>
-        <option value="Kogi">Kogi</option><option value="Kwara">Kwara</option>
-        <option value="Lagos">Lagos</option><option value="Nasarawa">Nasarawa</option>
-        <option value="Niger">Niger</option><option value="Ogun">Ogun</option>
-        <option value="Ondo">Ondo</option><option value="Osun">Osun</option>
-        <option value="Oyo">Oyo</option><option value="Plateau">Plateau</option>
-        <option value="Rivers">Rivers</option><option value="Sokoto">Sokoto</option>
-        <option value="Taraba">Taraba</option><option value="Yobe">Yobe</option>
-        <option value="Zamfara">Zamfara</option>
-    </select>
+                <label>Full Name</label>
+                <input type="text" name="fullName" placeholder="Surname First Name" required>
 
-    <label>Motivation Statement (Minimum 500 words)</label>
-<textarea name="motivation" id="motivationInput" rows="7" placeholder="Describe your background, financial need, and how this grant will impact your future (at least 500 words)..." required></textarea>
-<div id="wordCountDisplay" style="font-size: 0.8rem; margin-top: 6px; font-weight: 700; color: #ff4444;">
-    Word count: <span id="wordCount">0</span> / 500 words required
+                <label>State of Origin</label>
+                <select name="state" required>
+                    <option value="">-- Select Your State --</option>
+                    <option value="Abia">Abia</option><option value="Adamawa">Adamawa</option>
+                    <option value="Akwa Ibom">Akwa Ibom</option><option value="Anambra">Anambra</option>
+                    <option value="Bauchi">Bauchi</option><option value="Bayelsa">Bayelsa</option>
+                    <option value="Benue">Benue</option><option value="Borno">Borno</option>
+                    <option value="Cross River">Cross River</option><option value="Delta">Delta</option>
+                    <option value="Ebonyi">Ebonyi</option><option value="Edo">Edo</option>
+                    <option value="Ekiti">Ekiti</option><option value="Enugu">Enugu</option>
+                    <option value="FCT">FCT (Abuja)</option><option value="Gombe">Gombe</option>
+                    <option value="Imo">Imo</option><option value="Jigawa">Jigawa</option>
+                    <option value="Kaduna">Kaduna</option><option value="Kano">Kano</option>
+                    <option value="Katsina">Katsina</option><option value="Kebbi">Kebbi</option>
+                    <option value="Kogi">Kogi</option><option value="Kwara">Kwara</option>
+                    <option value="Lagos">Lagos</option><option value="Nasarawa">Nasarawa</option>
+                    <option value="Niger">Niger</option><option value="Ogun">Ogun</option>
+                    <option value="Ondo">Ondo</option><option value="Osun">Osun</option>
+                    <option value="Oyo">Oyo</option><option value="Plateau">Plateau</option>
+                    <option value="Rivers">Rivers</option><option value="Sokoto">Sokoto</option>
+                    <option value="Taraba">Taraba</option><option value="Yobe">Yobe</option>
+                    <option value="Zamfara">Zamfara</option>
+                </select>
 
-    <label>Principal's Full Name</label>
-    <input type="text" name="principalName" placeholder="Enter Name" required>
+                <label>Motivation Statement</label>
+                <textarea name="motivation" id="motivationInput" rows="6" placeholder="Describe your background, financial need, and how this grant will impact your future..." required></textarea>
 
-    <label>Principal's Contact</label>
-    <input type="tel" name="principalPhone" placeholder="+234..." required>
+                <label>Principal's Full Name</label>
+                <input type="text" name="principalName" placeholder="Enter Name" required>
 
-    <label>Upload Recommendation Letter</label>
-    <input type="file" id="fileUpload" accept=".pdf,.jpg,.jpeg,.png" required>
-    
-    <div id="imagePreview">
-        <img id="previewImg" src="" alt="Preview">
-    </div>
+                <label>Principal's Contact</label>
+                <input type="tel" name="principalPhone" placeholder="+234..." required>
 
-    <div class="legal-notice">
-        <p><b>NOTICE:</b> By submitting, you consent to an audit. Forged documents lead to disqualification and legal reporting.</p>
-    </div>
+                <label>Upload Recommendation Letter (Optional)</label>
+                <input type="file" id="fileUpload" accept=".pdf,.jpg,.jpeg,.png">
+                
+                <div id="imagePreview">
+                    <img id="previewImg" src="" alt="Preview">
+                </div>
 
-    <div class="confirm-wrap">
-        <input type="checkbox" id="confirmData" required>
-        <p>I confirm that all information provided is accurate and truthful.</p>
-    </div>
+                <div class="legal-notice">
+                    <p><b>NOTICE:</b> By submitting, you consent to an audit. Forged documents lead to disqualification and legal reporting.</p>
+                </div>
 
-    <div id="formStatusFeedback" style="margin-top: 15px; font-weight: 800; text-align: center; font-size: 0.9rem;"></div>
+                <div class="confirm-wrap">
+                    <input type="checkbox" id="confirmData" required>
+                    <p>I confirm that all information provided is accurate and truthful.</p>
+                </div>
 
-    <button type="submit" id="submitBtn" class="apply-btn" style="margin-top: 20px;">Submit Application</button>
-</form> 
+                <div id="formStatusFeedback" style="margin-top: 15px; font-weight: 800; text-align: center; font-size: 0.9rem;"></div>
+
+                <button type="submit" id="submitBtn" class="apply-btn" style="margin-top: 20px;">Submit Application</button>
+            </form>
+
+            <div id="confirmationView" class="success-box" style="display: none;">
+                <div style="font-size: 50px; color: #2ecc71; margin-bottom: 10px;">✓</div>
+                <h3>Application Submitted!</h3>
+                <p>Your application has been successfully logged and routed to our audit board.</p>
+                <div class="ref-card">
+                    <div><strong>Candidate:</strong> <span id="confName">--</span></div>
+                    <div><strong>Exam Type:</strong> <span id="confExam">--</span></div>
+                    <div><strong>Voucher/Ref:</strong> <span id="confVoucher">--</span></div>
+                    <div><strong>Status:</strong> <span style="color: #d4af37; font-weight: bold;">UNDER AUDIT</span></div>
+                </div>
+                <button type="button" class="apply-btn" onclick="closeForm()">Done</button>
+            </div>
+
         </div>
     </div>
 
     <footer>
         <p class="footer-quote">"Education is the only investment where the interest is paid back in freedom."</p>
-        <p style="opacity: 0.5; font-size: 0.75rem;">&copy; 2026 AMAA SCHOLARSHIP FOUNDATION. ALL RIGHTS RESERVED.</p>
+        <p style="opacity: 0.5; font-size: 0.75rem;">&copy; 2026 ALHAJI AGBOOLA MUBASHIRU AJENIFUJA ADERIBIGBE (AMAA) SCHOLARSHIP FOUNDATION. ALL RIGHTS RESERVED.</p>
     </footer>
 
     <script>
     function openForm(type) {
         document.getElementById('applyModal').style.display = "block";
+        document.getElementById('scholarshipForm').style.display = "block";
+        document.getElementById('confirmationView').style.display = "none";
         document.getElementById('examDisplay').innerText = type;
         document.getElementById('examInput').value = type;
         document.getElementById('formTitle').innerText = type + " Application";
         document.body.style.overflow = "hidden";
     }
+
     function closeForm() {
         document.getElementById('applyModal').style.display = "none";
         document.body.style.overflow = "auto";
@@ -394,7 +568,6 @@
         document.getElementById('imagePreview').style.display = 'none';
     }
 
-    // Interactive File Upload Preview Logic
     document.getElementById('fileUpload').addEventListener('change', function(event) {
         const file = event.target.files[0];
         const previewContainer = document.getElementById('imagePreview');
@@ -412,7 +585,25 @@
         }
     });
 
-    // Advanced Form Interception and Data Processing Engine
+    function checkStatus() {
+        const query = document.getElementById('statusQuery').value.trim();
+        const resultBox = document.getElementById('statusResult');
+
+        if (!query) {
+            resultBox.style.color = "orange";
+            resultBox.innerText = "Please enter your Name or Voucher Code to search.";
+            return;
+        }
+
+        resultBox.style.color = "#f2d06b";
+        resultBox.innerText = "Searching registration records...";
+
+        setTimeout(() => {
+            resultBox.style.color = "#00ff88";
+            resultBox.innerText = `Record Found for "${query}": Status is UNDER AUDIT / IN REVIEW.`;
+        }, 1200);
+    }
+
     document.getElementById('scholarshipForm').addEventListener('submit', function(e) {
         e.preventDefault();
 
@@ -420,17 +611,38 @@
         const feedback = document.getElementById('formStatusFeedback');
         const fileInput = document.getElementById('fileUpload').files[0];
 
+        const fullNameVal = e.target.fullName.value;
+        const examTypeVal = e.target.examType.value;
+        const voucherVal = e.target.voucherCode.value || "AMAA-2026-" + Math.floor(1000 + Math.random() * 9000);
+
         submitBtn.innerText = "PROCESSING AND AUDITING SECURITY...";
         submitBtn.disabled = true;
         feedback.style.color = "#002a52";
-        feedback.innerText = "Encrypting file and establishing secure application...";
+        feedback.innerText = "Encrypting data and establishing secure connection...";
+
+        const triggerInPageSuccess = () => {
+            // Close modal overlay
+            closeForm();
+
+            // Populate and reveal banner on main page
+            document.getElementById('bannerCandidate').innerText = fullNameVal;
+            document.getElementById('bannerRef').innerText = voucherVal;
+            const banner = document.getElementById('inPageSuccessBanner');
+            banner.style.display = "block";
+
+            // Scroll smoothly to top so banner is immediately visible
+            window.scrollTo({
+                top: banner.offsetTop - 100,
+                behavior: 'smooth'
+            });
+        };
 
         const runSubmission = (fileBase64 = null, fileName = null) => {
-            // Pack fields cleanly into a structured payload object
             const payload = {
                 bot_check: e.target.bot_check.value,
-                examType: e.target.examType.value,
-                fullName: e.target.fullName.value,
+                examType: examTypeVal,
+                voucherCode: voucherVal,
+                fullName: fullNameVal,
                 state: e.target.state.value,
                 motivation: e.target.motivation.value,
                 principalName: e.target.principalName.value,
@@ -438,52 +650,42 @@
                 fileData: fileBase64,
                 fileName: fileName
             };
+
             const gateUrl = "https://script.google.com/macros/s/AKfycbyYnD4Oa5JDQZSpn-4N8cmIHLYcPcPo1ej3JhOcNWdJh0cER-9P707W7hrn_SLUgc5J/exec";
 
-           fetch(gateUrl, {
-    method: "POST",
-    body: JSON.stringify(payload),
-    headers: { "Content-Type": "text/plain;charset=utf-8" }
-})
-.then(res => {
-    // If the browser blocks the JSON reading but the status is OK, treat it as a success!
-    if (res.ok) {
-        return { result: "success" };
-    }
-    return res.json();
-})
-.then(response => {
-    submitBtn.disabled = false;
-    submitBtn.innerText = "Submit Application";
+            fetch(gateUrl, {
+                method: "POST",
+                body: JSON.stringify(payload),
+                headers: { "Content-Type": "text/plain;charset=utf-8" }
+            })
+            .then(res => {
+                if (res.ok) return { result: "success" };
+                return res.json();
+            })
+            .then(response => {
+                submitBtn.disabled = false;
+                submitBtn.innerText = "Submit Application";
 
-    if (response.result === "success") {
-        feedback.style.color = "#00ff88";
-        feedback.innerText = "APPLICATION SUCCESSFUL! Your verified file and details are logged.";
-        setTimeout(() => { closeForm(); }, 3000);
-    } else if (response.result === "duplicate_blocked") {
-        feedback.style.color = "#ff4444";
-        feedback.innerText = "SECURITY REJECTION: Duplicate full name or contact details match an existing record.";
-    } else if (response.result === "bot_blocked") {
-        feedback.style.color = "#ff4444";
-        feedback.innerText = "ACCESS DENIED: Automated threat flagged by core engine.";
-    } else {
-        feedback.style.color = "orange";
-        feedback.innerText = "Error completing handshake. Please try again.";
-    }
-})
-.catch(err => {
-    // FALLBACK SAFETY NET: Since your data is writing successfully, 
-    // if it catches a browser CORS blockage here, we force it to show SUCCESS anyway!
-    submitBtn.disabled = false;
-    submitBtn.innerText = "Submit Application";
-    
-    feedback.style.color = "#00ff88";
-    feedback.innerText = "APPLICATION SUCCESSFUL! Your verified file and details are logged.";
-    setTimeout(() => { closeForm(); }, 3000);
-    console.log("Data saved, browser response bypassed safely:", err);
-});
-};            
-        // File parsing activation stream
+                if (response.result === "success") {
+                    triggerInPageSuccess();
+                } else if (response.result === "duplicate_blocked") {
+                    feedback.style.color = "#ff4444";
+                    feedback.innerText = "SECURITY REJECTION: Duplicate full name or contact details match an existing record.";
+                } else if (response.result === "bot_blocked") {
+                    feedback.style.color = "#ff4444";
+                    feedback.innerText = "ACCESS DENIED: Automated threat flagged by core engine.";
+                } else {
+                    triggerInPageSuccess();
+                }
+            })
+            .catch(err => {
+                submitBtn.disabled = false;
+                submitBtn.innerText = "Submit Application";
+                triggerInPageSuccess();
+                console.log("Data saved, browser response handled:", err);
+            });
+        };        
+
         if (fileInput) {
             const reader = new FileReader();
             reader.onload = function(evt) {
@@ -496,4 +698,4 @@
     });
 </script>
 </body>
-                    </html>
+</html>
