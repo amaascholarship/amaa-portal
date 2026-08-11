@@ -228,6 +228,13 @@
             transition: 0.3s;
         }
 
+        .apply-btn:disabled {
+            background: #555 !important;
+            color: #aaa !important;
+            cursor: not-allowed;
+            box-shadow: none !important;
+        }
+
         .status-checker-section {
             background: rgba(255, 255, 255, 0.02);
             border: 1px solid rgba(212, 175, 55, 0.2);
@@ -268,7 +275,7 @@
             border: 1px solid rgba(212, 175, 55, 0.4);
             background: #001a35;
             color: #fff;
-            font-size: 1rem;
+            font-size: 16px; /* Prevents auto-zoom on iOS */
         }
 
         .checker-box button {
@@ -313,7 +320,17 @@
         .modal-content { background: #fff; margin: 2vh auto; padding: 40px; width: 95%; max-width: 550px; border-radius: 30px; color: var(--deep-navy); position: relative; }
         
         label { font-weight: 800; display: block; margin-top: 20px; font-size: 0.75rem; text-transform: uppercase; color: #666; letter-spacing: 1px; }
-        input, select, textarea { width: 100%; padding: 14px; margin-top: 8px; border: 2px solid #f0f0f0; border-radius: 12px; font-family: inherit; font-size: 1rem; }
+        
+        /* Set font-size to 16px to stop iOS Safari auto-zooming on focus */
+        input, select, textarea { 
+            width: 100%; 
+            padding: 14px; 
+            margin-top: 8px; 
+            border: 2px solid #f0f0f0; 
+            border-radius: 12px; 
+            font-family: inherit; 
+            font-size: 16px; 
+        }
         
         .target-box { background: var(--deep-navy); color: #d4af37; padding: 15px; border-radius: 12px; margin-top: 8px; font-weight: 900; text-align: center; font-size: 1.2rem; }
 
@@ -416,11 +433,11 @@
     </div>
 
     <h2 class="section-title">Select Your Examination</h2>
-    <div class="exam-grid">
-        <div class="exam-card"><h3>WAEC</h3><button class="apply-btn" onclick="openForm('WAEC')">Apply Now</button></div>
-        <div class="exam-card"><h3>JAMB</h3><button class="apply-btn" onclick="openForm('JAMB')">Apply Now</button></div>
-        <div class="exam-card"><h3>NECO</h3><button class="apply-btn" onclick="openForm('NECO')">Apply Now</button></div>
-        <div class="exam-card"><h3>SSCE</h3><button class="apply-btn" onclick="openForm('SSCE')">Apply Now</button></div>
+    <div class="exam-grid" id="examGrid">
+        <div class="exam-card"><h3>WAEC</h3><button class="apply-btn exam-btn" onclick="openForm('WAEC')">Apply Now</button></div>
+        <div class="exam-card"><h3>JAMB</h3><button class="apply-btn exam-btn" onclick="openForm('JAMB')">Apply Now</button></div>
+        <div class="exam-card"><h3>NECO</h3><button class="apply-btn exam-btn" onclick="openForm('NECO')">Apply Now</button></div>
+        <div class="exam-card"><h3>SSCE</h3><button class="apply-btn exam-btn" onclick="openForm('SSCE')">Apply Now</button></div>
     </div>
 
     <section class="status-checker-section">
@@ -507,7 +524,7 @@
                 <label>Principal's Contact</label>
                 <input type="tel" name="principalPhone" placeholder="+234..." required>
 
-                <label>Upload Document: Principal's Recommendation Letter / Testimonial / Leaving Certificate (Optional)</label>
+                <label>Upload Document: Principal's Recommendation Letter / Testimonial / Leaving Certificate (Max 4MB)</label>
                 <input type="file" id="fileUpload" accept=".pdf,.jpg,.jpeg,.png">
                 
                 <div id="imagePreview">
@@ -604,6 +621,16 @@
         }, 1200);
     }
 
+    // Pre-set list of valid voucher codes
+    const VALID_VOUCHERS = [
+        "AMAA-2026-001",
+        "AMAA-2026-002",
+        "AMAA-2026-003",
+        "AMAA-2026-004",
+        "AMAA-2026-005",
+        "AMAA-2026-TEST"
+    ];
+
     document.getElementById('scholarshipForm').addEventListener('submit', function(e) {
         e.preventDefault();
 
@@ -613,30 +640,54 @@
 
         const fullNameVal = e.target.fullName.value;
         const examTypeVal = e.target.examType.value;
-        const voucherVal = e.target.voucherCode.value.trim();
+        const voucherVal = e.target.voucherCode.value.trim().toUpperCase();
 
+        // 1. Voucher validation checks
         if (!voucherVal) {
             feedback.style.color = "#ff4444";
             feedback.innerText = "VALIDATION ERROR: An official Voucher Code is required to submit.";
             return;
         }
 
+        if (!VALID_VOUCHERS.includes(voucherVal)) {
+            feedback.style.color = "#ff4444";
+            feedback.innerText = "INVALID VOUCHER: The code entered is not recognized or has expired.";
+            return;
+        }
+
+        // 2. Client-side File Size Check (4MB Limit to prevent payload crash)
+        if (fileInput) {
+            const MAX_SIZE = 4 * 1024 * 1024; // 4 Megabytes
+            if (fileInput.size > MAX_SIZE) {
+                feedback.style.color = "#ff4444";
+                feedback.innerText = "FILE TOO LARGE: Please upload a document smaller than 4MB.";
+                return;
+            }
+        }
+
+        // UI Feedback during processing
         submitBtn.innerText = "PROCESSING AND AUDITING SECURITY...";
         submitBtn.disabled = true;
         feedback.style.color = "#002a52";
-        feedback.innerText = "Encrypting data and establishing secure connection...";
+        feedback.innerText = "Voucher verified! Encrypting data and establishing secure connection...";
 
         const triggerInPageSuccess = () => {
-            // Close modal overlay
             closeForm();
 
-            // Populate and reveal banner on main page
+            // Populate success banner details
             document.getElementById('bannerCandidate').innerText = fullNameVal;
             document.getElementById('bannerRef').innerText = voucherVal;
+            
             const banner = document.getElementById('inPageSuccessBanner');
             banner.style.display = "block";
 
-            // Scroll smoothly to top so banner is immediately visible
+            // Disable exam buttons to prevent accidental duplicate entries
+            document.querySelectorAll('.exam-btn').forEach(btn => {
+                btn.disabled = true;
+                btn.innerText = "Applied";
+            });
+
+            // Smooth scroll up to success banner
             window.scrollTo({
                 top: banner.offsetTop - 100,
                 behavior: 'smooth'
@@ -665,7 +716,7 @@
                 headers: { "Content-Type": "text/plain;charset=utf-8" }
             })
             .then(res => {
-                if (res.ok) return { result: "success" };
+                if (res.ok) return res.json().catch(() => ({ result: "success" }));
                 return res.json();
             })
             .then(response => {
@@ -674,12 +725,15 @@
 
                 if (response.result === "success") {
                     triggerInPageSuccess();
-                } else if (response.result === "duplicate_blocked") {
+                } else if (response.result === "already_claimed") {
                     feedback.style.color = "#ff4444";
-                    feedback.innerText = "SECURITY REJECTION: Duplicate full name or contact details match an existing record.";
+                    feedback.innerText = "VOUCHER EXPIRED: This voucher code has already been claimed.";
+                } else if (response.result === "invalid_voucher") {
+                    feedback.style.color = "#ff4444";
+                    feedback.innerText = "INVALID VOUCHER: Code not found in database.";
                 } else if (response.result === "bot_blocked") {
                     feedback.style.color = "#ff4444";
-                    feedback.innerText = "ACCESS DENIED: Automated threat flagged by core engine.";
+                    feedback.innerText = "ACCESS DENIED: Automated threat flagged.";
                 } else {
                     triggerInPageSuccess();
                 }
@@ -688,7 +742,7 @@
                 submitBtn.disabled = false;
                 submitBtn.innerText = "Submit Application";
                 triggerInPageSuccess();
-                console.log("Data saved, browser response handled:", err);
+                console.log("Submission processed:", err);
             });
         };        
 
