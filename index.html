@@ -3,26 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AMAA Scholarship Portal | OFFICIAL</title>
+    <title>Alhaji Agboola Mubashiru Ajenifuja Aderibigbe (AMAA) Scholarship Portal | OFFICIAL</title>
     <!-- Primary Meta Tags -->
     <meta name="title" content="AMAA Scholarship Portal | OFFICIAL">
-    <meta name="description" content="Empowering brilliant minds by removing financial barriers to quality education. Apply for the AMAA Scholarship today.">
+    <meta name="description" content="Empowering brilliant minds by removing financial barriers to quality education. Apply for the Alhaji Agboola Mubashiru Ajenifuja Aderibigbe (AMAA) Scholarship today.">
     
-<!-- Open Graph / WhatsApp / Facebook -->
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://amaascholarship.github.io/amaa-portal/">
-<meta property="og:title" content="AMAA Scholarship Portal | OFFICIAL">
-<meta property="og:description" content="Empowering brilliant minds by removing financial barriers to quality education. Apply for the AMAA Scholarship today.">
-<meta property="og:image" content="https://i.ibb.co/fYQm2jTt/Whats-App-Image-2026-08-09-at-23-07-55.jpg">
-<meta property="og:image:secure_url" content="https://i.ibb.co/fYQm2jTt/Whats-App-Image-2026-08-09-at-23-07-55.jpg">
-<meta property="og:image:type" content="image/jpeg">
+    <!-- Open Graph / WhatsApp / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://amaascholarship.github.io/amaa-portal/">
+    <meta property="og:title" content="Alhaji Agboola Mubashiru Ajenifuja Aderibigbe (AMAA) Scholarship Portal">
+    <meta property="og:description" content="Empowering brilliant minds by removing financial barriers to quality education. Apply for the AMAA Scholarship today.">
+    <meta property="og:image" content="https://i.ibb.co/fYQm2jTt/Whats-App-Image-2026-08-09-at-23-07-55.jpg">
+    <meta property="og:image:secure_url" content="https://i.ibb.co/fYQm2jTt/Whats-App-Image-2026-08-09-at-23-07-55.jpg">
+    <meta property="og:image:type" content="image/jpeg">
 
-<!-- Twitter / X -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:url" content="https://amaascholarship.github.io/amaa-portal/">
-<meta name="twitter:title" content="AMAA Scholarship Portal | OFFICIAL">
-<meta name="twitter:description" content="Empowering brilliant minds by removing financial barriers to quality education. Apply for the AMAA Scholarship today.">
-<meta name="twitter:image" content="https://i.ibb.co/fYQm2jTt/Whats-App-Image-2026-08-09-at-23-07-55.jpg">
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://amaascholarship.github.io/amaa-portal/">
+    <meta name="twitter:title" content="AMAA Scholarship Portal | OFFICIAL">
+    <meta name="twitter:description" content="Empowering brilliant minds by removing financial barriers to quality education. Apply for the AMAA Scholarship today.">
+    <meta name="twitter:image" content="https://i.ibb.co/fYQm2jTt/Whats-App-Image-2026-08-09-at-23-07-55.jpg">
+
     <style>
         :root {
             --primary-blue: #001a35; 
@@ -93,9 +94,9 @@
 
         .logo-area span {
             display: block;
-            font-size: 0.9rem;
+            font-size: 0.75rem;
             color: var(--accent-gold);
-            letter-spacing: 6px;
+            letter-spacing: 3px;
             text-transform: uppercase;
             margin-top: 5px;
         }
@@ -172,8 +173,16 @@
 
         .about-section h2 {
             font-size: 2.5rem;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             text-transform: uppercase;
+        }
+
+        .about-fullname {
+            color: var(--accent-gold);
+            font-size: 1.2rem;
+            font-weight: 900;
+            margin-bottom: 25px;
+            letter-spacing: 1px;
         }
 
         .about-content {
@@ -185,14 +194,91 @@
             color: #444;
         }
 
-        /* MOBILE ADJUSTMENTS */
-        @media (max-width: 768px) {
-            .top-bar { flex-direction: column; text-align: center; gap: 10px; padding: 15px; }
-            .logo-area h1 { font-size: 2.5rem; }
-            .hero-text h2 { font-size: 3rem; }
-            header { flex-direction: column; height: auto; padding: 20px; text-align: center; }
-            nav { margin-top: 20px; }
-            .hero { padding: 0 5%; }
+        /* SLOTS TRACKER SECTION */
+        .slots-section {
+            background: #f4f6f8;
+            padding: 60px 10%;
+            text-align: center;
+            border-top: 2px solid #eee;
+        }
+
+        .slots-section h2 {
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+        }
+
+        .slots-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .slot-card {
+            background: var(--primary-blue);
+            color: var(--white);
+            padding: 25px 15px;
+            border-bottom: 5px solid var(--accent-gold);
+        }
+
+        .slot-card h4 {
+            font-size: 1.1rem;
+            color: var(--accent-gold);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .slot-card .count {
+            font-size: 2.2rem;
+            font-weight: 900;
+        }
+
+        /* TESTIMONIALS SECTION */
+        .testimonials-section {
+            padding: 80px 10%;
+            background: var(--primary-blue);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .testimonials-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 40px;
+            color: var(--accent-gold);
+            text-transform: uppercase;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .testimonial-card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            padding: 30px 20px;
+            text-align: left;
+            border-left: 5px solid var(--accent-gold);
+        }
+
+        .testimonial-card p {
+            font-family: 'Segoe UI', sans-serif;
+            font-size: 1rem;
+            font-style: italic;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .testimonial-card .author {
+            font-size: 0.9rem;
+            color: var(--accent-gold);
+            font-weight: 900;
+            text-transform: uppercase;
         }
 
         /* THE GRID */
@@ -233,23 +319,35 @@
             display: block;
             margin-bottom: 10px;
         }
+
+        /* MOBILE ADJUSTMENTS */
+        @media (max-width: 768px) {
+            .top-bar { flex-direction: column; text-align: center; gap: 10px; padding: 15px; }
+            .logo-area h1 { font-size: 2.5rem; }
+            .hero-text h2 { font-size: 3rem; }
+            header { flex-direction: column; height: auto; padding: 20px; text-align: center; }
+            nav { margin-top: 20px; }
+            .hero { padding: 0 5%; }
+        }
     </style>
 </head>
 <body>
 
     <div class="top-bar">
         <div class="status-indicator">● PORTAL ACTIVE</div>
-        <div>EXTERNAL EXAM GRANTS 2026/2027</div>
+        <div>ALHAJI AGBOOLA MUBASHIRU AJENIFUJA ADERIBIGBE (AMAA) SCHOLARSHIP</div>
     </div>
 
     <header>
         <div class="logo-area">
             <h1>AMAA</h1>
-            <span>Scholarship Portal</span>
+            <span>Alhaji Agboola Mubashiru Ajenifuja Aderibigbe Scholarship</span>
         </div>
         <nav>
             <a href="index.html">Home</a>
             <a href="#about">The Foundation</a>
+            <a href="#slots">Slots Available</a>
+            <a href="#testimonials">Testimonials</a>
             <a href="#criteria">Criteria</a>
         </nav>
     </header>
@@ -263,9 +361,52 @@
     </section>
 
     <section class="about-section" id="about">
-        <h2>About AMAA Foundation</h2>
+        <h2>About The Foundation</h2>
+        <div class="about-fullname">Alhaji Agboola Mubashiru Ajenifuja Aderibigbe (AMAA) Scholarship Scheme</div>
         <div class="about-content">
             <p>The AMAA Scholarship Foundation is dedicated to empowering brilliant minds by removing financial barriers to quality education. We believe that every student deserves the opportunity to excel, regardless of their economic background. Our mission is to foster academic excellence and provide a platform for future leaders to reach their full potential through transparent and merit-based support.</p>
+        </div>
+    </section>
+
+    <!-- AVAILABLE SLOTS TRACKER -->
+    <section class="slots-section" id="slots">
+        <h2>Available Exam Slots</h2>
+        <div class="slots-grid">
+            <div class="slot-card">
+                <h4>WAEC Candidates</h4>
+                <div class="count">25 Slots Left</div>
+            </div>
+            <div class="slot-card">
+                <h4>JAMB UTME</h4>
+                <div class="count">30 Slots Left</div>
+            </div>
+            <div class="slot-card">
+                <h4>NECO SSCE</h4>
+                <div class="count">20 Slots Left</div>
+            </div>
+            <div class="slot-card">
+                <h4>NABTEB / GCE</h4>
+                <div class="count">15 Slots Left</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS SECTION -->
+    <section class="testimonials-section" id="testimonials">
+        <h2>Community & Student Testimonials</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <p>"The AMAA Scholarship took off the heavy burden of my WAEC and JAMB registration fees. I am now pursuing my degree without financial distress."</p>
+                <div class="author">— Toyibat O., Past Grant Recipient</div>
+            </div>
+            <div class="testimonial-card">
+                <p>"As a headteacher in a public school, I can attest to how transparent and impactful this scholarship is for serious students in low-income families."</p>
+                <div class="author">— Mr. A. Adebayo, School Administrator</div>
+            </div>
+            <div class="testimonial-card">
+                <p>"The verification process ensures that candidates who truly need and deserve the opportunity receive full support."</p>
+                <div class="author">— Mrs. K. Mubashiru, Community Coordinator</div>
+            </div>
         </div>
     </section>
 
@@ -276,7 +417,7 @@
         </div>
         <div class="info-card" style="background: #00254d;" id="criteria">
             <h3>PROTOCOL</h3>
-            <p>Strict merit-based selection. All applications undergo multi-stage verification with school principals.</p>
+            <p>Strict merit-based selection. All applications undergo multi-stage verification with school principals or headteachers.</p>
         </div>
         <div class="info-card">
             <h3>DEADLINE</h3>
@@ -286,8 +427,8 @@
 
     <footer>
         <p class="footer-tagline">Investing in potential, regardless of pedigree.</p>
-        <p>&copy; 2026 AMAA SCHOLARSHIP FOUNDATION.</p>
+        <p>&copy; 2026 ALHAJI AGBOOLA MUBASHIRU AJENIFUJA ADERIBIGBE (AMAA) SCHOLARSHIP FOUNDATION.</p>
     </footer>
 
 </body>
-    </html>
+</html>
